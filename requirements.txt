@@ -1,0 +1,10 @@
+streamlit
+pymupdf
+python-docx
+sentence-transformers
+faiss-cpu
+numpy
+groq
+requests
+python-dotenv
+rouge-score
