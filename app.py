@@ -497,7 +497,7 @@ if not st.session_state.started:
     _, middle, _ = st.columns([1, 0.6, 1])
 
     with middle:
-        if st.button("Get Started->", use_container_width=True):
+        if st.button("Get Started ➤", use_container_width=True):
             st.session_state.started = True
             st.rerun()
 
