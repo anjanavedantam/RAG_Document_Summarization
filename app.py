@@ -469,7 +469,39 @@ h1, h2, h3, h4 {
 </style>
 """, unsafe_allow_html=True)
 
+# ---------------- LANDING SCREEN ----------------
 
+st.session_state.setdefault("started", False)
+
+if not st.session_state.started:
+
+    st.markdown("""
+    <style>
+    .landing {
+        text-align: center;
+        padding-top: 26vh;
+    }
+    .landing .brand-title {
+        font-size: clamp(44px, 7vw, 80px);
+        margin-bottom: 36px;
+    }
+    </style>
+
+    <div class="landing">
+        <div class="brand-title">
+            Document Assistant
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    _, middle, _ = st.columns([1, 0.6, 1])
+
+    with middle:
+        if st.button("Get Started->", use_container_width=True):
+            st.session_state.started = True
+            st.rerun()
+
+    st.stop()
 # ---------------- LEFT BRANDING ----------------
 
 left, right = st.columns([0.85, 1.65], gap="large")
